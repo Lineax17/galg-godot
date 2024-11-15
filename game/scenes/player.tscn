@@ -1,7 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://4qm3u5btyo7n"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_lf3by"]
 [ext_resource type="Texture2D" uid="uid://dsv10nsrual0c" path="res://assets/xwing.png" id="2_fbde7"]
+
+[sub_resource type="GDScript" id="GDScript_qxtdy"]
+script/source = "extends Node2D
+
+# Movement speed
+var speed = 100
+
+var input_right = KEY_D
+var input_left = KEY_A
+var input_down = KEY_S
+var input_up = KEY_W
+
+
+func _process(delta):
+	var direction
+	
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v8623"]
 animations = [{
@@ -18,7 +34,7 @@ animations = [{
 radius = 7.07107
 
 [node name="Player" type="Node2D"]
-script = ExtResource("1_lf3by")
+script = SubResource("GDScript_qxtdy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v8623")

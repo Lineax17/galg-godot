@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731098321
+::res://::1731179671
 icon.svg::CompressedTexture2D::7293934519624736165::1731090471::1731090482::1::::<><>::
 ::res://assets/::1731091438
 alien_1.png::CompressedTexture2D::6327700413831993339::1717935890::1731091438::1::::<><>::
@@ -76,8 +76,9 @@ worm_3.png::CompressedTexture2D::2914117490242167730::1718983361::1731091438::1:
 worm_4.png::CompressedTexture2D::6494832200709959047::1718983361::1731091438::1::::<><>::
 xwing.png::CompressedTexture2D::8467637167467865696::1717935890::1731091438::1::::<><>::
 xwing_blinking.png::CompressedTexture2D::5544962530805599326::1717945681::1731091438::1::::<><>::
-::res://scenes/::1731098316
-game.tscn::PackedScene::3602636750099502181::1731098316::0::1::::<><>::
-player.tscn::PackedScene::2069286212593351957::1731098316::0::1::::<><>::res://scripts/player.gd<>uid://dsv10nsrual0c::::res://assets/xwing.png
+::res://scenes/::1731166271
+game.tscn::PackedScene::3602636750099502181::1731099961::0::1::::<><>::
+player.tscn::PackedScene::2069286212593351957::1731099961::0::1::::<><>::res://scripts/player.gd<>uid://dsv10nsrual0c::::res://assets/xwing.png
+world.tscn::PackedScene::1867524739614606176::1731166271::0::1::::<><>::uid://m1tq0s11dsgx::::res://assets/corner_left_bottom_1.png<>uid://dg1ttk30u4msk::::res://assets/corner_left_top_1.png<>uid://co4hrwbibrycx::::res://assets/corner_right_bottom_1.png<>uid://c3ucmdmxf8ev2::::res://assets/wall_left.png<>uid://c53ngmgucdfcu::::res://assets/wall_right.png<>uid://bpkd7upf8mmvg::::res://assets/wall_inner.png<>uid://cvqfrqcdp8kk4::::res://assets/corner_right_top_1.png
 ::res://scripts/::1731098077
 player.gd::GDScript::-1::1731098046::0::1::::<>CharacterBody2D<>::
