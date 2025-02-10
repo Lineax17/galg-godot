@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://brle5vp36x8sv"]
+
+[ext_resource type="PackedScene" uid="uid://4qm3u5btyo7n" path="res://scenes/player.tscn" id="1_wy2b5"]
+[ext_resource type="PackedScene" uid="uid://1uv4hyhmj6lg" path="res://scenes/world.tscn" id="2_8qi2l"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_wy2b5")]
+movement_speed = 350.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(0.5, 0.5)
+
+[node name="World" parent="." instance=ExtResource("2_8qi2l")]
+position = Vector2(-4, -314)

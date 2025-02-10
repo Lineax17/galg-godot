@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://4qm3u5btyo7n"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_e7efe"]
+[ext_resource type="PackedScene" uid="uid://mfta5hdr82o7" path="res://scenes/bullet.tscn" id="2_50j5l"]
+[ext_resource type="Texture2D" uid="uid://dsv10nsrual0c" path="res://assets/xwing.png" id="2_fbde7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1n11"]
+radius = 7.07107
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8623"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fbde7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+motion_mode = 1
+script = ExtResource("1_e7efe")
+bullet = ExtResource("2_50j5l")
+bullet_cooldown = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_a1n11")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v8623")
