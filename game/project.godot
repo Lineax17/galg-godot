@@ -15,6 +15,14 @@ run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EntityManager="*res://scripts/entity_manager.gd"
+
+[dotnet]
+
+project/assembly_name="game"
+
 [input]
 
 move_up={
