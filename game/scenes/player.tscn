@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://4qm3u5btyo7n"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_e7efe"]
+[ext_resource type="Script" uid="uid://bnbv5f843oxvx" path="res://scripts/player.gd" id="1_e7efe"]
 [ext_resource type="PackedScene" uid="uid://mfta5hdr82o7" path="res://scenes/bullet.tscn" id="2_50j5l"]
 [ext_resource type="Texture2D" uid="uid://dsv10nsrual0c" path="res://assets/xwing.png" id="2_fbde7"]
 

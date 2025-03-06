@@ -9,7 +9,7 @@ var timer = 0.0
 
 func _physics_process(delta):
 	timer = timer + delta
-	print(timer)
+
 	#apply movement
 	if character_direction:
 		velocity = character_direction * movement_speed

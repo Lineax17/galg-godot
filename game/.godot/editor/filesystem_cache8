@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739222749
+::res://::1740314281
 icon.svg::CompressedTexture2D::7293934519624736165::1731090471::1737405121::1::::<><>::
 ::res://assets/::1737405122
 alien_1.png::CompressedTexture2D::6327700413831993339::1717935890::1737405121::1::::<><>::
@@ -76,12 +76,12 @@ worm_3.png::CompressedTexture2D::2914117490242167730::1718983361::1737405121::1:
 worm_4.png::CompressedTexture2D::6494832200709959047::1718983361::1737405121::1::::<><>::
 xwing.png::CompressedTexture2D::8467637167467865696::1717935890::1737405121::1::::<><>::
 xwing_blinking.png::CompressedTexture2D::5544962530805599326::1717945681::1737405121::1::::<><>::
-::res://scenes/::1739222749
-bullet.tscn::PackedScene::853743221963738272::1739222765::0::1::::<><>::res://scripts/shot.gd<>uid://dhx4tp3168wsb::::res://assets/gem_1.png
-game.tscn::PackedScene::3602636750099502181::1739222707::0::1::::<><>::uid://4qm3u5btyo7n::::res://scenes/player.tscn<>uid://1uv4hyhmj6lg::::res://scenes/world.tscn
-player.tscn::PackedScene::2069286212593351957::1739222707::0::1::::<><>::res://scripts/player.gd<>uid://dsv10nsrual0c::::res://assets/xwing.png
-world.tscn::PackedScene::1867524739614606176::1739222707::0::1::::<><>::uid://m1tq0s11dsgx::::res://assets/corner_left_bottom_1.png<>uid://dg1ttk30u4msk::::res://assets/corner_left_top_1.png<>uid://co4hrwbibrycx::::res://assets/corner_right_bottom_1.png<>uid://c3ucmdmxf8ev2::::res://assets/wall_left.png<>uid://c53ngmgucdfcu::::res://assets/wall_right.png<>uid://bpkd7upf8mmvg::::res://assets/wall_inner.png<>uid://cvqfrqcdp8kk4::::res://assets/corner_right_top_1.png
-::res://scripts/::1739222707
+::res://scenes/::1739225190
+bullet.tscn::PackedScene::853743221963738272::1739225190::0::1::::<><>::res://scripts/bullet.gd<>uid://dhx4tp3168wsb::::res://assets/gem_1.png
+game.tscn::PackedScene::3602636750099502181::1739225189::0::1::::<><>::uid://4qm3u5btyo7n::::res://scenes/player.tscn<>uid://1uv4hyhmj6lg::::res://scenes/world.tscn
+player.tscn::PackedScene::2069286212593351957::1739225189::0::1::::<><>::res://scripts/player.gd<>uid://mfta5hdr82o7::::res://scenes/bullet.tscn<>uid://dsv10nsrual0c::::res://assets/xwing.png
+world.tscn::PackedScene::1867524739614606176::1739225189::0::1::::<><>::uid://m1tq0s11dsgx::::res://assets/corner_left_bottom_1.png<>uid://dg1ttk30u4msk::::res://assets/corner_left_top_1.png<>uid://co4hrwbibrycx::::res://assets/corner_right_bottom_1.png<>uid://c3ucmdmxf8ev2::::res://assets/wall_left.png<>uid://c53ngmgucdfcu::::res://assets/wall_right.png<>uid://bpkd7upf8mmvg::::res://assets/wall_inner.png<>uid://cvqfrqcdp8kk4::::res://assets/corner_right_top_1.png
+::res://scripts/::1739224995
+bullet.gd::GDScript::-1::1739224892::0::1::::<>Area2D<>::
 entity_manager.gd::GDScript::-1::1738615686::0::1::::<>Node<>::
-player.gd::GDScript::-1::1739222707::0::1::::<>CharacterBody2D<>::
-shot.gd::GDScript::-1::1738615761::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1739224995::0::1::::<>CharacterBody2D<>::
