@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var movement_speed : float = 500
 @export var bullet : PackedScene
-@export var bullet_cooldown = 1.0
+@export var bullet_cooldown = 0.3
 
 var character_direction : Vector2
 var timer = 0.0

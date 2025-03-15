@@ -23,7 +23,6 @@ scale = Vector2(2, 2)
 motion_mode = 1
 script = ExtResource("1_e7efe")
 bullet = ExtResource("2_50j5l")
-bullet_cooldown = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_a1n11")
