@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ceyye1m125kka"]
+[gd_scene load_steps=7 format=3 uid="uid://ceyye1m125kka"]
 
 [ext_resource type="Texture2D" uid="uid://cwfgkilmnwrst" path="res://assets/alien_1.png" id="1_u8rjw"]
 [ext_resource type="Texture2D" uid="uid://q7uyhf6jawyg" path="res://assets/alien_2.png" id="2_3vbw7"]
-[ext_resource type="Script" uid="uid://dtpp5if7g1ddt" path="res://scripts/alien.gd" id="3_3vbw7"]
+[ext_resource type="Script" uid="uid://bndltwax86jcl" path="res://scripts/alien.gd" id="3_3vbw7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_np108"]
 radius = 16.0
@@ -21,7 +21,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Alien" type="CharacterBody2D"]
+[sub_resource type="GDScript" id="GDScript_3vbw7"]
+
+[node name="Alien" type="CharacterBody2D" groups=["destructible"]]
+collision_mask = 2
+script = ExtResource("3_3vbw7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_np108")
@@ -31,4 +35,4 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vxp04")
 autoplay = "default"
 frame_progress = 0.804536
-script = ExtResource("3_3vbw7")
+script = SubResource("GDScript_3vbw7")

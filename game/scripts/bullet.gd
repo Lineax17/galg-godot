@@ -7,6 +7,8 @@ const DIRECTION : Vector2 = Vector2 (0,-1)
 
 var timer = 0.0
 
+func _ready():
+	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _physics_process(delta: float) -> void:
 	timer = timer + delta
@@ -19,3 +21,10 @@ func _physics_process(delta: float) -> void:
 	
 func init(position: Vector2) -> void:
 	self.position = position
+
+func _on_body_entered(body):
+	print("getroffen:", body.name)
+	if body.is_in_group("destructible"):
+		print("Zerstörbares Objekt erkannt")
+		body.queue_free()
+		self.queue_free()

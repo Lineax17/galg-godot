@@ -24,6 +24,10 @@ LevelLoader="*res://scripts/level_loader.gd"
 
 project/assembly_name="game"
 
+[global_group]
+
+destructible="a group of objects that will be destroyed if colliding with other objects"
+
 [input]
 
 move_up={

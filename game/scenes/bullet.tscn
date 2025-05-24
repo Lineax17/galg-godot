@@ -7,10 +7,11 @@
 size = Vector2(8, 16)
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_f32bm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_11uc7")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_cfbhf")
