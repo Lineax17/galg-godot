@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://oj7ts62sxnrc"]
+[gd_scene load_steps=4 format=4 uid="uid://oj7ts62sxnrc"]
 
 [ext_resource type="PackedScene" uid="uid://c8ttqsrpnwudp" path="res://scenes/level.tscn" id="1_sjb42"]
 [ext_resource type="PackedScene" uid="uid://ceyye1m125kka" path="res://scenes/alien.tscn" id="2_pdtm5"]
+[ext_resource type="PackedScene" uid="uid://bbbebm1o4bur0" path="res://scenes/ufo.tscn" id="3_b3oru"]
 
 [node name="Level" instance=ExtResource("1_sjb42")]
 
@@ -10,3 +11,6 @@ tile_map_data = PackedByteArray("AAACAAIAAQAAAAAAAAACAAMAAwAAAAAAAAACAAQAAwAAAAA
 
 [node name="Alien" parent="." index="1" instance=ExtResource("2_pdtm5")]
 position = Vector2(1, -466)
+
+[node name="ufo" parent="." index="2" instance=ExtResource("3_b3oru")]
+position = Vector2(111, -858)

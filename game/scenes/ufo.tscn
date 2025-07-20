@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbbebm1o4bur0"]
+
+[ext_resource type="Texture2D" uid="uid://durrjsa4tnsno" path="res://assets/ufo_1.png" id="1_rotgi"]
+[ext_resource type="Script" uid="uid://pwk343m3ycja" path="res://scripts/ufo.gd" id="1_xf4xf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xf4xf"]
+radius = 19.0263
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gp6nc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rotgi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ufo" type="CharacterBody2D" groups=["destructible"]]
+script = ExtResource("1_xf4xf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xf4xf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_gp6nc")
