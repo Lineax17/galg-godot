@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbbebm1o4bur0"]
+[gd_scene load_steps=6 format=3 uid="uid://bbbebm1o4bur0"]
 
 [ext_resource type="Texture2D" uid="uid://durrjsa4tnsno" path="res://assets/ufo_1.png" id="1_rotgi"]
 [ext_resource type="Script" uid="uid://pwk343m3ycja" path="res://scripts/ufo.gd" id="1_xf4xf"]
+[ext_resource type="PackedScene" uid="uid://c78pi7dl04s4m" path="res://scenes/enemy_bullet.tscn" id="2_gp6nc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xf4xf"]
 radius = 19.0263
@@ -19,6 +20,7 @@ animations = [{
 
 [node name="ufo" type="CharacterBody2D" groups=["destructible"]]
 script = ExtResource("1_xf4xf")
+enemy_bullet = ExtResource("2_gp6nc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xf4xf")

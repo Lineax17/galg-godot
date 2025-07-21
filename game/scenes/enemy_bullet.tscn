@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c78pi7dl04s4m"]
+
+[ext_resource type="Texture2D" uid="uid://45tbd836er67" path="res://assets/enemy_shot.png" id="1_d2qol"]
+[ext_resource type="Script" uid="uid://wppomktyn5wb" path="res://scripts/enemy_bullet.gd" id="1_qx7rs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qx7rs"]
+radius = 8.0
+
+[node name="Area2D" type="Area2D" groups=["destructible"]]
+script = ExtResource("1_qx7rs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_qx7rs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_d2qol")

@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-# speed
 @export var movement_speed : float = 100.0
 @export var side_speed : float = 50.0
 # cooldown
 @export var down_time : float = 3.0
 @export var pause_time : float = 1.0  
-@export var side_time : float = 2.0  
+@export var side_time : float = 3.0  
+
+@export var enemy_bullet : PackedScene
 
 var sidespeed_direction = "right"
 var state = "down"
@@ -24,6 +25,7 @@ func _physics_process(delta):
 	elif state == "pause":
 		velocity = Vector2.ZERO
 		if timer >= pause_time:
+			shoot()
 			state = "side"
 			randomize_side_direction()
 			timer = 0.0
@@ -38,8 +40,13 @@ func _physics_process(delta):
 			timer = 0.0
 
 	move_and_slide()
+
+func shoot():
+	var bullet_instance = enemy_bullet.instantiate()
+	bullet_instance.init(position)
+	EntityManager.add_child(bullet_instance)
 	
-	
+
 func randomize_side_direction():
 	if (randi() % 2 == 0):
 		sidespeed_direction = "left"
