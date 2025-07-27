@@ -28,3 +28,4 @@ func _on_body_entered(body):
 		print("Zerstörbares Objekt erkannt")
 		body.queue_free()
 		self.queue_free()
+	self.queue_free()

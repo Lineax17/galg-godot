@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://cq1sfk7x20anp"]
+
+[ext_resource type="Texture2D" uid="uid://cflvmwfah4678" path="res://assets/bat_1.png" id="1_48wkk"]
+[ext_resource type="Script" uid="uid://b8nfeshvlj4a2" path="res://scripts/bat.gd" id="1_ss3tx"]
+[ext_resource type="PackedScene" uid="uid://c78pi7dl04s4m" path="res://scenes/enemy_bullet.tscn" id="2_lv0ya"]
+[ext_resource type="Texture2D" uid="uid://c3p0a11w4l7fn" path="res://assets/bat_2.png" id="2_ss3tx"]
+[ext_resource type="Texture2D" uid="uid://3esogux7emx2" path="res://assets/bat_3.png" id="3_lv0ya"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fn3r"]
+radius = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qtcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_48wkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ss3tx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lv0ya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Bat" type="CharacterBody2D" groups=["destructible", "enemy"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ss3tx")
+enemy_bullet = ExtResource("2_lv0ya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5fn3r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8qtcx")
+frame_progress = 0.150068

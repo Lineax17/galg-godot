@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4qm3u5btyo7n"]
+[gd_scene load_steps=7 format=3 uid="uid://4qm3u5btyo7n"]
 
 [ext_resource type="Script" uid="uid://bnbv5f843oxvx" path="res://scripts/player.gd" id="1_e7efe"]
 [ext_resource type="PackedScene" uid="uid://mfta5hdr82o7" path="res://scenes/bullet.tscn" id="2_50j5l"]
@@ -18,8 +18,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_e7efe")
 bullet = ExtResource("2_50j5l")
@@ -29,3 +33,13 @@ shape = SubResource("CircleShape2D_a1n11")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_v8623")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qhqgy")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

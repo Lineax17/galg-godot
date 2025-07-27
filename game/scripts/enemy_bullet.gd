@@ -28,3 +28,5 @@ func _on_body_entered(body):
 		print("Zerstörbares Objekt erkannt")
 		print("Spieler wurde getroffen")
 		self.queue_free()
+	if not body.is_in_group("enemy"):
+		self.queue_free()

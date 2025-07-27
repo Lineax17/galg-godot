@@ -24,7 +24,9 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_3vbw7"]
 
-[node name="Alien" type="CharacterBody2D" groups=["destructible"]]
+[node name="Alien" type="CharacterBody2D" groups=["destructible", "enemy"]]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("3_3vbw7")
 enemy_bullet = ExtResource("2_np108")
 

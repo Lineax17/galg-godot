@@ -30,3 +30,9 @@ func _input(InputEvent):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.y = Input.get_axis("move_up", "move_down")
 	character_direction = character_direction.normalized()
+
+func _on_body_entered(body):
+	if body.is_in_group("enemy"):
+		print("Collision:", body.name)
+		body.queue_free()
+		print("Spieler ist kollidiert")
