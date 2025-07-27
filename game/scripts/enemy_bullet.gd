@@ -27,6 +27,10 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		print("Zerstörbares Objekt erkannt")
 		print("Spieler wurde getroffen")
+		inflict_player_damage()
 		self.queue_free()
 	if not body.is_in_group("enemy"):
 		self.queue_free()
+
+func inflict_player_damage():
+	get_tree().root.get_node("/root/PathLookup").get_player().take_damage(1)
