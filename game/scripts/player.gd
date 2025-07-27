@@ -22,7 +22,7 @@ func _physics_process(delta):
 
 func shoot():
 	var bullet_instance = bullet.instantiate()
-	bullet_instance.init(position)
+	bullet_instance.init(global_position)
 	EntityManager.add_child(bullet_instance)
 	
 func _input(InputEvent):
