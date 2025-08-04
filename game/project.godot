@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="game"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="uid://ccpw0vt63kkuc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 EntityManager="*res://scripts/global/entity_manager.gd"
 LevelLoader="*res://scripts/global/level_loader.gd"
 PathLookup="*res://scripts/global/path_lookup.gd"
+
+[display]
+
+window/size/mode=4
 
 [dotnet]
 

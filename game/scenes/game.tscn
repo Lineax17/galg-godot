@@ -18,4 +18,5 @@ movement_speed = 350.0
 z_index = -10
 
 [node name="Sprite2D" type="Sprite2D" parent="AutoScrollCamera/Parallax2D"]
+scale = Vector2(3, 3)
 texture = ExtResource("4_lbhrr")
