@@ -34,6 +34,7 @@ project/assembly_name="game"
 destructible="a group of objects that will be destroyed if colliding with other objects"
 enemy="group of enemies"
 player=""
+walls="group of all tilesets that represent the walls of the game"
 
 [input]
 

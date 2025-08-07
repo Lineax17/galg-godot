@@ -23,9 +23,16 @@ func init(position: Vector2) -> void:
 	self.position = position
 
 func _on_body_entered(body):
-	print("getroffen:", body.name)
+	print("Bullet: Hit ", body.name)
 	if body.is_in_group("destructible"):
-		print("Zerstörbares Objekt erkannt")
+		print("Destructible object recognized: " + body.name)
 		body.queue_free()
 		self.queue_free()
 	self.queue_free()
+
+func _on_area_entered(area: Area2D) -> void:
+	print("Bullet: Hit ", area.name)
+	if area.is_in_group("destructible"):
+		print("Destructible object recognized: " + area.name)
+		area.queue_free()
+		self.queue_free()

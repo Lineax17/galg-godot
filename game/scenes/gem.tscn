@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp7d7iqk2uboc"]
+
+[ext_resource type="Script" uid="uid://d11od7sd67745" path="res://scripts/gem.gd" id="1_dn3vp"]
+[ext_resource type="Texture2D" uid="uid://dhx4tp3168wsb" path="res://assets/gem_1.png" id="1_rj4j3"]
+[ext_resource type="Texture2D" uid="uid://4svuc6li37ex" path="res://assets/gem_2.png" id="2_dn3vp"]
+[ext_resource type="Texture2D" uid="uid://kcjho5jufnbk" path="res://assets/gem_3.png" id="3_dhpy3"]
+[ext_resource type="Texture2D" uid="uid://d4l7i7mctkjb3" path="res://assets/gem_4.png" id="4_o6gnd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_35lcq"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eaa7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rj4j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dn3vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dhpy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o6gnd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gem" type="Area2D" groups=["destructible"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_dn3vp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_35lcq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_eaa7k")
+autoplay = "default"
+frame_progress = 0.820614

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://oj7ts62sxnrc"]
+[gd_scene load_steps=6 format=4 uid="uid://oj7ts62sxnrc"]
 
 [ext_resource type="PackedScene" uid="uid://c8ttqsrpnwudp" path="res://scenes/level.tscn" id="1_sjb42"]
 [ext_resource type="PackedScene" uid="uid://ceyye1m125kka" path="res://scenes/alien.tscn" id="2_pdtm5"]
 [ext_resource type="PackedScene" uid="uid://bbbebm1o4bur0" path="res://scenes/ufo.tscn" id="3_b3oru"]
 [ext_resource type="PackedScene" uid="uid://cq1sfk7x20anp" path="res://scenes/bat.tscn" id="4_ua5ty"]
+[ext_resource type="PackedScene" uid="uid://bp7d7iqk2uboc" path="res://scenes/gem.tscn" id="5_61w3m"]
 
 [node name="Level" instance=ExtResource("1_sjb42")]
 
@@ -19,6 +20,9 @@ position = Vector2(160, -741)
 
 [node name="Bat" parent="." index="3" instance=ExtResource("4_ua5ty")]
 position = Vector2(7, -2631)
+
+[node name="Gem" parent="." index="4" instance=ExtResource("5_61w3m")]
+position = Vector2(-180, -510)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(1, -524)
