@@ -22,4 +22,4 @@ position = Vector2(127, -693)
 position = Vector2(36, -773)
 
 [node name="Area2D" parent="." index="5"]
-position = Vector2(-2, -1395)
+position = Vector2(0, -1500)

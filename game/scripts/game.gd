@@ -16,10 +16,14 @@ func load_level(filename: String) -> void:
 	# Load new level
 	var scene: PackedScene = load(LEVELDIRECTORY + filename)
 	if scene:
+		PathLookup.get_player().position = Vector2(0,0)
+		PathLookup.get_camera().position = Vector2(0,0)
+		
+		await get_tree().process_frame
+		
 		var scene_instance = scene.instantiate()
 		current_level = scene_instance
 		get_tree().root.get_node("Game").add_child(scene_instance)
-		PathLookup.get_player().position = Vector2(0,0)
-		PathLookup.get_camera().position = Vector2(0,0)
+		
 	else:
 		push_error("Level konnte nicht geladen werden: " + filename)
