@@ -19,6 +19,7 @@ func load_level(filename: String) -> void:
 		PathLookup.get_player().position = Vector2(0,0)
 		PathLookup.get_camera().position = Vector2(0,0)
 		
+		# needed for player reset to complete
 		await get_tree().process_frame
 		
 		var scene_instance = scene.instantiate()
