@@ -20,3 +20,6 @@ position = Vector2(127, -693)
 
 [node name="Bat" parent="." index="4" instance=ExtResource("3_py88r")]
 position = Vector2(36, -773)
+
+[node name="Area2D" parent="." index="5"]
+position = Vector2(-2, -1395)
