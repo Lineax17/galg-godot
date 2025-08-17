@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://drojtmukb0ec6"]
+
+[ext_resource type="Script" uid="uid://clsi2b2tvaepu" path="res://ui/scripts/end_screen.gd" id="1_iuj6g"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 576.0
+offset_top = 324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_iuj6g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -30.0
+offset_top = 140.0
+offset_right = 28.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CLOSE"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

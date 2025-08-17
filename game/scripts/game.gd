@@ -1,6 +1,7 @@
 extends Node2D
 	
 const LEVELDIRECTORY = "res://levels/"
+const LAST_LEVEL_NUMBER = 2
 
 var current_level: Node = null
 var current_level_number: int = 1
@@ -9,6 +10,9 @@ func _ready() -> void:
 	load_level("level1.tscn")
 
 func load_level(filename: String) -> void:
+	# Check if game is over and load endscreen
+	if current_level_number == LAST_LEVEL_NUMBER + 1:
+		load_end_screen()
 	# Remove old level if exists
 	if current_level and is_instance_valid(current_level):
 		current_level.queue_free()
@@ -28,3 +32,6 @@ func load_level(filename: String) -> void:
 		
 	else:
 		push_error("Level konnte nicht geladen werden: " + filename)
+
+func load_end_screen():
+	get_tree().change_scene_to_file("res://ui/EndScreen.tscn")
